@@ -1,0 +1,7 @@
+---
+layout: post
+image:  "https://cl.ly/1j0m3f0h080U/joshua-newton-199769.jpg"
+date:   2018-02-03 13:09:42 +0400
+title:  "Main Title"
+description: "Subtitle here about something"
+---

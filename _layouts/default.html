@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    <main>
+      {% for post in site.posts %}
+        <figure>
+          <div style="background-image: url({{ post.image }}), url({{ post.image }}), url({{ post.image }}), url({{ post.image }})" />
+          <figcaption>
+          <!-- <a href="{{ post.url }}">{{ post.title }}</a> -->
+            <h5>{{ post.title }}</h5>
+            <p>{{ post.description }}</p>
+          </figcaption>
+        </figure>
+      {% endfor %}
+      <nav class="arrows">
+
+      </nav>
+    </main>
+
+  </body>
+</html>
