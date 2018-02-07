@@ -4,4 +4,6 @@ image:  "https://cl.ly/430l0z2t082h/eberhard-grossgasteiger-536641.jpg"
 date:   2018-02-03 13:09:42 +0400
 title:  "Main Title"
 description: "Subtitle here about something"
+title2:  "Main Title"
+description2: "Subtitle here about something"
 ---

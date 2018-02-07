@@ -7,11 +7,15 @@
     <main>
       {% for post in site.posts %}
         <figure>
-          <div style="background-image: url({{ post.image }}), url({{ post.image }}), url({{ post.image }}), url({{ post.image }})" />
+          <div style="background-image: url({{ post.image }})" />
           <figcaption>
-          <!-- <a href="{{ post.url }}">{{ post.title }}</a> -->
+            <!-- <a href="{{ post.url }}">{{ post.title }}</a> -->
             <h5>{{ post.title }}</h5>
             <p>{{ post.description }}</p>
+          </figcaption>
+          <figcaption>
+            <h5>{{ post.title2 }}</h5>
+            <p>{{ post.description2 }}</p>
           </figcaption>
         </figure>
       {% endfor %}
@@ -22,3 +26,19 @@
 
   </body>
 </html>
+
+<script type="text/javascript">
+  // carousel scripting
+  (function(){
+    let projects = document.querySelectorAll('figure')
+
+    // activate first item
+    projects[0].classList.add('active')
+    
+    projects.forEach((project, key) => {
+      // some scripting
+    })
+
+
+  })()
+</script>
