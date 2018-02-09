@@ -4,6 +4,6 @@ image:  "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9bb2c753333119.5
 date:   2018-02-03 13:09:42 +0400
 title:  "MOOSIK Breaks Free"
 description: "Art Direction, Branding, Illustration"
-# title2:  "Main Title"
-# description2: "Subtitle here about something"
+title2:  "Second Title"
+description2: "Subtitle here about something"
 ---

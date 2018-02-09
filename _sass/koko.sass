@@ -111,6 +111,9 @@ figure
     transform: translate3d(0, 25%, 1px)
     transition-property: opacity, visibility, transform
 
+    &:nth-child(2)
+      transition-delay: .15s
+
   div 
     position: absolute
     width: 100%
@@ -136,6 +139,9 @@ figure
       opacity: 0
       visibility: hidden
       transform: translate3d(0, 25%, 1px)
+
+      &:nth-child(2)
+        transition-delay: 0s
 
 
 figcaption
