@@ -22,7 +22,6 @@ main
   height: 100%
   paddion: 2px
   background: white
-  border: 2px solid transparent
   transition: .8s ease border-color
 
   &::before
@@ -69,8 +68,6 @@ main
       animation: columns 1.6s ease both
 
   &.ready
-    border-color: black
-
     .arrows
       opacity: 1
       transform: translate3d(0, 0, 1px)
@@ -121,6 +118,8 @@ figure
     top: 0
     left: 0
     background-size: cover
+    border: 2px solid black
+    box-sizing: border-box
 
   div,
   figcaption
@@ -142,7 +141,6 @@ figure
 
       &:nth-child(2)
         transition-delay: 0s
-
 
 figcaption
   position: absolute
