@@ -12,7 +12,6 @@
         <figure>
           <div style="background-image: url({{ post.image }})" />
           <figcaption>
-            <!-- <a href="{{ post.url }}">{{ post.title }}</a> -->
             <h5>{{ post.title }}</h5>
             <p>{{ post.description }}</p>
           </figcaption>
@@ -41,14 +40,19 @@
     // activate first item
     var activeProject = 0
     
+    var t = window.setTimeout(() => 0)
     function activateProject (n) {
+      main.classList.remove('loading')
+      window.clearTimeout(t)
       if (n < 0) n = lastProjectIndex
       else if (n > lastProjectIndex) n = 0
       main.classList.add('loading')
-      var t = window.setTimeout(() => {
-        projects[activeProject].classList.remove('active')
+      projects[activeProject].classList.add('out')
+      t = window.setTimeout(() => {
+        projects[activeProject].classList.remove('active', 'out')
         projects[n].classList.add('active')
         activeProject = n
+        main.classList.add('ready')
         t = window.setTimeout(() => {
           main.classList.remove('loading')
           window.clearTimeout(t)
@@ -56,7 +60,12 @@
       }, 800)
     }
 
-    window.onload = () => activateProject(activeProject)
+    window.onload = () => {
+      let t = window.setTimeout(() => {
+        activateProject(activeProject)
+        window.clearTimeout(t)
+      }, 2000)
+    }
 
     // arrows clicking
     let arrows = document.querySelectorAll('.arrows svg')
