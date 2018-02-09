@@ -1,9 +1,9 @@
 ---
 layout: post
-image:  "https://cl.ly/430l0z2t082h/eberhard-grossgasteiger-536641.jpg"
+image:  "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9bb2c753333119.59305d5c03e54.gif"
 date:   2018-02-03 13:09:42 +0400
-title:  "Main Title"
-description: "Subtitle here about something"
-title2:  "Main Title"
-description2: "Subtitle here about something"
+title:  "MOOSIK Breaks Free"
+description: "Art Direction, Branding, Illustration"
+# title2:  "Main Title"
+# description2: "Subtitle here about something"
 ---

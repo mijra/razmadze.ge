@@ -5,6 +5,9 @@
 
   <body>
     <main>
+      <div class="columns">
+        <span></span><span></span><span></span><span></span>
+      </div>
       {% for post in site.posts %}
         <figure>
           <div style="background-image: url({{ post.image }})" />
@@ -20,7 +23,8 @@
         </figure>
       {% endfor %}
       <nav class="arrows">
-
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><use xlink:href="#icon-arrow-left"></use></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><use xlink:href="#icon-arrow-right"></use></svg>
       </nav>
     </main>
 
@@ -30,15 +34,44 @@
 <script type="text/javascript">
   // carousel scripting
   (function(){
+    let main = document.querySelector('main')
     let projects = document.querySelectorAll('figure')
+    let lastProjectIndex = projects.length - 1
 
     // activate first item
-    projects[0].classList.add('active')
+    var activeProject = 0
     
-    projects.forEach((project, key) => {
-      // some scripting
-    })
+    function activateProject (n) {
+      if (n < 0) n = lastProjectIndex
+      else if (n > lastProjectIndex) n = 0
+      main.classList.add('loading')
+      var t = window.setTimeout(() => {
+        projects[activeProject].classList.remove('active')
+        projects[n].classList.add('active')
+        activeProject = n
+        t = window.setTimeout(() => {
+          main.classList.remove('loading')
+          window.clearTimeout(t)
+        }, 800)
+      }, 800)
+    }
 
+    window.onload = () => activateProject(activeProject)
 
+    // arrows clicking
+    let arrows = document.querySelectorAll('.arrows svg')
+    let leftArrow = arrows[0]
+    let rightArrow = arrows[1]
+
+    leftArrow.addEventListener('click', () => activateProject(activeProject - 1))
+    rightArrow.addEventListener('click', () => activateProject(activeProject + 1))
   })()
 </script>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <!-- arrow left -->
+  <path id="icon-arrow-left" fill="currentColor" fill-rule="evenodd" d="M21,42 C9.40202025,42 0,32.5979797 0,21 C0,9.40202025 9.40202025,0 21,0 C32.5979797,0 42,9.40202025 42,21 C42,32.5979797 32.5979797,42 21,42 Z M23.5,8 L18.5,12 L23.5,18.5 L9,18.5 L9,24 L23.5,24 L18.5,30.5 L23.5,34 L34,21 L23.5,8 Z" transform="matrix(-1 0 0 1 42 0)"/>
+  
+  <!-- arrow right -->
+  <path id="icon-arrow-right" fill="currentColor" fill-rule="evenodd" d="M21,42 C9.40202025,42 0,32.5979797 0,21 C0,9.40202025 9.40202025,0 21,0 C32.5979797,0 42,9.40202025 42,21 C42,32.5979797 32.5979797,42 21,42 Z M23.5,8 L18.5,12 L23.5,18.5 L9,18.5 L9,24 L23.5,24 L18.5,30.5 L23.5,34 L34,21 L23.5,8 Z"/>
+</svg>

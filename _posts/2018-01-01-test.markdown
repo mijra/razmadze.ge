@@ -1,7 +1,7 @@
 ---
 layout: post
-image:  "https://cl.ly/1j0m3f0h080U/joshua-newton-199769.jpg"
+image:  "https://mir-s3-cdn-cf.behance.net/project_modules/1400/405aad57040901.59ec5d516c5d4.jpg"
 date:   2018-02-03 13:09:42 +0400
-title:  "Main Title"
-description: "Subtitle here about something"
+title:  "Metro Tbilisi"
+description: "Branding, Typography, Graphic, Design"
 ---
