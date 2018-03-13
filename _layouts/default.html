@@ -8,19 +8,12 @@
       <div class="columns">
         <span></span><span></span><span></span><span></span>
       </div>
-      {% for post in site.posts %}
-        <figure>
-          <div style="background-image: url({{ post.image }})" />
-          <figcaption>
-            <h5>{{ post.title }}</h5>
-            <p>{{ post.description }}</p>
-          </figcaption>
-          <figcaption>
-            <h5>{{ post.title2 }}</h5>
-            <p>{{ post.description2 }}</p>
-          </figcaption>
-        </figure>
+      
+      <!-- {{ site.posts }} -->
+      {% for post in site.posts reversed %}
+        {{ post }}
       {% endfor %}
+
       <nav class="arrows">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><use xlink:href="#icon-arrow-left"></use></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><use xlink:href="#icon-arrow-right"></use></svg>
@@ -61,10 +54,7 @@
     }
 
     window.onload = () => {
-      let t = window.setTimeout(() => {
-        activateProject(activeProject)
-        window.clearTimeout(t)
-      }, 2400)
+      activateProject(activeProject)
     }
 
     // arrows clicking
