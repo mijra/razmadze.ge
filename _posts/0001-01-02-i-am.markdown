@@ -1,10 +1,12 @@
 ---
 layout: post
 
-text: "I am akaki razmadze"
+headline: I am akaki 
+headline2: razmadze
 
-title:  "Contact"
-description: "There is my Email Address contact@razmadze.ge"
-title2:  "Social networks"
-description2: "www.instagram.com/razmadzekoko www.behance.net/razmadze"
+title:  Contact
+description: There is my Email Address <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+
+title2:  Social networks
+description2: <a href="http://instagram.com/razmadzekoko" target="_blank">www.instagram.com/razmadzekoko</a><br><a href="http://behance.net/razmadze" target="_blank">www.behance.net/razmadze</a>
 ---

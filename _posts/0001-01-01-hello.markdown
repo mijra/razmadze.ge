@@ -1,10 +1,12 @@
 ---
 layout: post
 
-text: "Hello Everyone"
+headline: Hello  
+headline2: Everyone
 
-title:  "About site"
-description: "There is my Personal site and works, Typography & Graphic Design"
-title2:  "More info"
-description2: "To find out other details, please see the next pages"
+title:  About site
+description: There is my Personal site and works, <br>Typography & Graphic Design
+
+title2:  More info
+description2: To find out other details, <br>please see the next pages
 ---
