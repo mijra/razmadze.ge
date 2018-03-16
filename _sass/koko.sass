@@ -1,5 +1,9 @@
 @import 'fonts'
 
+$headlineAnimationX: 10%
+$headlineAnimationDuration: .35s, .65s
+$headlineAnimationDurationOut: .5s, .75s
+  
 html
   font-size: 10px
   padding: 10vmin 10vmin
@@ -75,10 +79,9 @@ figure
 
       > div
         opacity: 0
-        transform: translate3d(15%, 0, 1px)
-        transition: linear .45s
+        transform: translate3d($headlineAnimationX, 0, 1px)
+        transition: linear $headlineAnimationDuration
         transition-property: opacity, transform
-
         &:nth-child(2)
           transition-delay: .075s
       
@@ -107,7 +110,11 @@ figure
 
     h2 > div
       opacity: 0
-      transform: translate3d(-20%, 0, 1px)
+      transform: translate3d(-$headlineAnimationX, 0, 1px)
+      transition-duration: $headlineAnimationDurationOut
+      // transition-delay: .075s
+      // &:nth-child(2)
+      //   transition-delay: 0s
 
 .description
   position: absolute
