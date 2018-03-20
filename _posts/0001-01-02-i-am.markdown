@@ -1,0 +1,12 @@
+---
+layout: post
+
+headline: I am akaki 
+headline2: razmadze
+
+title:  Contact
+description: There is my Email Address <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+
+title2:  Social networks
+description2: <a href="http://instagram.com/razmadzekoko" target="_blank">www.instagram.com/razmadzekoko</a><br><a href="http://behance.net/razmadze" target="_blank">www.behance.net/razmadze</a>
+---

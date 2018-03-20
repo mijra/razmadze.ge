@@ -1,0 +1,11 @@
+---
+layout: post
+
+headline: And you 
+headline2: can too
+
+title:  Co-operation
+description: Customer is not a client, customer <br>is an important part of work.
+title2:  Feedback
+description2: The customer's contribution with feedback <br>and friendly attitude always helps the process.
+---
