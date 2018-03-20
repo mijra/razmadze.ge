@@ -67,6 +67,7 @@ figure
       margin: 0
       line-height: 1
       transition: .2s ease font-size
+      position: relative
   
     h1 
       font-size: 32vh
@@ -77,13 +78,16 @@ figure
       margin-top: 4vh
       word-break: break-word
 
-      > div
-        opacity: 0
-        transform: translate3d($headlineAnimationX, 0, 1px)
+      > span:after
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 0
         transition: linear $headlineAnimationDuration
-        transition-property: opacity, transform
-        &:nth-child(2)
-          transition-delay: .075s
+        transition-property: width
+        background: black
       
   .description,
   .screen
@@ -99,9 +103,15 @@ figure
       visibility: visible
       transform: translate3d(0, 0, 1px)
 
-    h2 > div
-      opacity: 1
-      transform: translate3d(0, 0, 1px)
+    h2 > span:after
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      height: 0
+      width: 100%
+      transition: linear $headlineAnimationDuration
+      transition-property: width
 
   &.out
     .description
@@ -112,9 +122,6 @@ figure
       opacity: 0
       transform: translate3d(-$headlineAnimationX, 0, 1px)
       transition-duration: $headlineAnimationDurationOut
-      // transition-delay: .075s
-      // &:nth-child(2)
-      //   transition-delay: 0s
 
 .description
   position: absolute
