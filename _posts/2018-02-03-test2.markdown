@@ -4,9 +4,11 @@ date:   2018-02-03 13:09:42 +0400
 category: "Project"
 
 image:  "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9bb2c753333119.59305d5c03e54.gif"
+
 title:  "MOOSIK Breaks Free"
 description: "Art Direction, Branding, Illustration
 aq ori xazi unda iyos toma"
+
 title2:  "Second Title"
 description2: "Subtitle here about something
 aqac meore xazze ewereba xolme rame"

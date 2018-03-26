@@ -1,0 +1,52 @@
+main 
+  transition: .8s ease opacity
+  opacity: 0
+
+  &.ready
+    opacity: 1
+    
+    .arrows
+      opacity: 1
+      transform: translate3d(0, 0, 1px)
+
+.screen 
+  visibility: hidden
+  opacity: 0 
+
+  h2 > div
+    opacity: 0
+    transform: translate3d(15%, 0, 1px)
+    transition: linear .45s
+    transition-property: opacity, transform
+
+    &:nth-child(2)
+      transition-delay: .075s
+
+.description
+  transition: 1s ease
+  transition-property: opacity, visibility, transform
+  opacity: 0
+  visibility: hidden
+  
+figure 
+  &.active
+    pointer-events: auto
+
+    .description,
+    .screen
+      opacity: 1
+      visibility: visible
+      transform: translate3d(0, 0, 1px)
+
+    h2 > div
+      opacity: 1
+      transform: translate3d(0, 0, 1px)
+
+  &.out
+    .description
+      opacity: 0
+      visibility: hidden
+
+    h2 > div
+      opacity: 0
+      transform: translate3d(-20%, 0, 1px)

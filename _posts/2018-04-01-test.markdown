@@ -1,7 +1,10 @@
 ---
 layout: post
+date:   2018-02-03 13:09:42 +0400
+category: "Project"
 
 image:  "https://mir-s3-cdn-cf.behance.net/project_modules/1400/405aad57040901.59ec5d516c5d4.jpg"
+
 title:  "Metro Tbilisi v2"
 description: "Branding, Typography, Graphic, Design"
 ---

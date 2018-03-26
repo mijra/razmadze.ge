@@ -1,0 +1,17 @@
+.arrows 
+  position: absolute
+  top: 100%
+  right: 0
+  padding: 2vh 0
+  opacity: 0
+  transform: translate3d(0, 25%, 1px)
+  transition: 1s ease
+  transition-property: opacity, transform
+
+  svg
+    width: 32px
+    margin-left: .35em
+    cursor: pointer
+
+    &:hover
+      color: lighten(black, 10%)

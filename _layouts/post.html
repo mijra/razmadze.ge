@@ -1,7 +1,12 @@
 ---
 layout: post
 ---
-<figure>
+{% if page.category %}
+  <figure class="project">
+{% else %}
+  <figure>
+{% endif %}
+  
   {% if page.image %}
     <div class="screen" style="background-image: url({{ page.image }})" />
   {% else %}
