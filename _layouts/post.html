@@ -7,17 +7,19 @@ layout: post
   <figure class="slide">
 {% endif %}
   
-  {% if page.image %}
-    <div class="screen" style="background-image: url({{ page.image }})" />
-  {% else %}
-    <div class="screen">
-      <h1>{{ page.date | date: "%d" }}</h1>
-      <h2>
-        <div>{{ page.headline }}</div>
-        <div>{{ page.headline2 }}</div>
-      </h2>
-    </div>
-  {% endif %}
+  <div class="overflow">
+    {% if page.image %}
+      <div class="screen" style="background-image: url({{ page.image }})" />
+    {% else %}
+      <div class="screen">
+        <h1>{{ page.date | date: "%d" }}</h1>
+        <h2>
+          <div>{{ page.headline }}</div>
+          <div>{{ page.headline2 }}</div>
+        </h2>
+      </div>
+    {% endif %}
+  </div>
 
   <figcaption class="description">
     <h5>{{ page.title }}</h5>

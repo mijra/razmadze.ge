@@ -15,7 +15,7 @@ const compose = (...fns) =>
     activeIndex: 0,
     slideInDelay: 550,
     secondSlideDelay: 100,
-    slidingDuration: 800,
+    slidingDuration: 750,
   }
 
   SETTINGS.lastIndex = SETTINGS.slideNodes.length - 1
@@ -67,6 +67,12 @@ const compose = (...fns) =>
     let previousNode = slideNodes[activeIndex]
     let nextNode = slideNodes[newActiveIndex]
 
+    let isProject = 
+      previousNode.classList.contains('project') || 
+      nextNode.classList.contains('project')
+    if (isProject) rootNode.classList.add('move')
+    else rootNode.classList.remove('move')
+
     // Slide total duration is duration + delay
     let totalDuration = slidingDuration + secondSlideDelay * 2
     
@@ -78,7 +84,7 @@ const compose = (...fns) =>
     let timeout = window.setTimeout(() => {
       animateIn(nextNode, direction, totalDuration)
       window.clearTimeout(timeout)
-    }, slidingDuration)
+    }, isProject ? 0 : slidingDuration)
 
     // Update active slide index in Settings
     this.activeIndex = newActiveIndex

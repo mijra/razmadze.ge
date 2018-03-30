@@ -1,4 +1,8 @@
-main 
+$animationDuration: 750ms
+$animationDelay: 200ms
+$slidingDistance: 25%
+
+main.slider 
   transition: .8s ease opacity
   opacity: 0
 
@@ -9,20 +13,62 @@ main
       opacity: 1
       transform: translate3d(0, 0, 1px)
 
+  &.move 
+    .screen
+      animation: both $animationDuration
+    figure.in
+      .screen
+        background-color: white
+        animation-timing-function: ease-out
+      &.left .screen
+        animation-name: slideInLeftFull
+      &.right .screen
+        animation-name: slideInRightFull
+    figure.out
+      .screen
+        animation-timing-function: ease-in
+        animation-duration: $animationDuration * 2
+      &.left .screen
+        animation-name: slideOutLeftFull
+      &.right .screen
+        animation-name: slideOutRightFull
+  
+// full sliding moving left
+@keyframes slideInLeftFull
+  0% 
+    transform: translate3d(100%, 0, 1px)
+  100%
+    transform: translate3d(0, 0, 1px)
+
+@keyframes slideOutLeftFull
+  0% 
+    transform: translate3d(0, 0, 1px)
+  100%
+    transform: translate3d(-100%, 0, 1px)
+
+// full sliding moving right
+@keyframes slideInRightFull
+  0% 
+    transform: translate3d(-100%, 0, 1px)
+  100%
+    transform: translate3d(0, 0, 1px)
+
+@keyframes slideOutRightFull
+  0% 
+    transform: translate3d(0, 0, 1px)
+  100%
+    transform: translate3d(100%, 0, 1px)
+
 .description
   transition: 1s ease
   transition-property: opacity, visibility, transform
   opacity: 0
   visibility: hidden
-
-$animationDuration: 750ms
-$animationDelay: 200ms
-$slidingDistance: 25%
   
 figure.slide
   .description,
   h2 > div
-    animation: ease both $animationDuration
+    animation: both $animationDuration
 
   &.left h2 > div:nth-child(2)
     animation-duration: $animationDuration + $animationDelay
@@ -36,11 +82,11 @@ figure.slide
     visibility: hidden
   
   &.in
-    .description,
-    .screen
+    .description
       animation-name: fadeIn
-      animation-timing-function: easeIn
+      animation-timing-function: ease-in
 
+    &.project .screen,
     .screen > h1,
     .screen > h2 
       visibility: visible
@@ -52,10 +98,9 @@ figure.slide
       animation-name: fadeIn, slideInRight
 
   &.out
-    .description,
-    .screen
+    .description
       animation-name: fadeOut
-      animation-timing-function: easeOut
+      animation-timing-function: ease-out
 
     &.left h2 > div
       animation-name: fadeOut, slideOutLeft
@@ -78,6 +123,7 @@ figure.slide
   100%
     visibility: hidden
     opacity: 0
+
 
 // moving left
 @keyframes slideInLeft
@@ -104,4 +150,3 @@ figure.slide
     transform: translate3d(0, 0, 1px)
   100%
     transform: translate3d($slidingDistance, 0, 1px)
-
