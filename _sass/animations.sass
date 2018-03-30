@@ -9,44 +9,99 @@ main
       opacity: 1
       transform: translate3d(0, 0, 1px)
 
-.screen 
-  visibility: hidden
-  opacity: 0 
-
-  h2 > div
-    opacity: 0
-    transform: translate3d(15%, 0, 1px)
-    transition: linear .45s
-    transition-property: opacity, transform
-
-    &:nth-child(2)
-      transition-delay: .075s
-
 .description
   transition: 1s ease
   transition-property: opacity, visibility, transform
   opacity: 0
   visibility: hidden
 
-figure 
-  &.active
-    pointer-events: auto
+$animationDuration: 750ms
+$animationDelay: 200ms
+$slidingDistance: 25%
+  
+figure.slide
+  .description,
+  h2 > div
+    animation: ease both $animationDuration
 
+  &.left h2 > div:nth-child(2)
+    animation-duration: $animationDuration + $animationDelay
+
+  &.right h2 > div:nth-child(1)
+    animation-duration: $animationDuration + $animationDelay
+
+  &.project .screen,
+  .screen > h1,
+  .screen > h2 
+    visibility: hidden
+  
+  &.in
     .description,
     .screen
-      opacity: 1
-      visibility: visible
-      transform: translate3d(0, 0, 1px)
+      animation-name: fadeIn
+      animation-timing-function: easeIn
 
-    h2 > div
-      opacity: 1
-      transform: translate3d(0, 0, 1px)
+    .screen > h1,
+    .screen > h2 
+      visibility: visible
+
+    &.left h2 > div
+      animation-name: fadeIn, slideInLeft
+
+    &.right h2 > div
+      animation-name: fadeIn, slideInRight
 
   &.out
-    .description
-      opacity: 0
-      visibility: hidden
+    .description,
+    .screen
+      animation-name: fadeOut
+      animation-timing-function: easeOut
 
-    h2 > div
-      opacity: 0
-      transform: translate3d(-20%, 0, 1px)
+    &.left h2 > div
+      animation-name: fadeOut, slideOutLeft
+
+    &.right h2 > div
+      animation-name: fadeOut, slideOutRight
+
+@keyframes fadeIn
+  0% 
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+
+@keyframes fadeOut
+  0% 
+    visibility: visible
+    opacity: 1
+  100%
+    visibility: hidden
+    opacity: 0
+
+// moving left
+@keyframes slideInLeft
+  0% 
+    transform: translate3d($slidingDistance, 0, 1px)
+  100%
+    transform: translate3d(0, 0, 1px)
+
+@keyframes slideOutLeft
+  0% 
+    transform: translate3d(0, 0, 1px)
+  100%
+    transform: translate3d(-$slidingDistance, 0, 1px)
+
+// moving right
+@keyframes slideInRight
+  0% 
+    transform: translate3d(-$slidingDistance, 0, 1px)
+  100%
+    transform: translate3d(0, 0, 1px)
+
+@keyframes slideOutRight
+  0% 
+    transform: translate3d(0, 0, 1px)
+  100%
+    transform: translate3d($slidingDistance, 0, 1px)
+

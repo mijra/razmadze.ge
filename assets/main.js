@@ -13,7 +13,9 @@ const compose = (...fns) =>
 
     // slider settings
     activeIndex: 0,
-    slidingDuration: 750,
+    slideInDelay: 550,
+    secondSlideDelay: 100,
+    slidingDuration: 800,
   }
 
   SETTINGS.lastIndex = SETTINGS.slideNodes.length - 1
@@ -49,29 +51,32 @@ const compose = (...fns) =>
       slideNodes,
       activeIndex,
       lastIndex, 
-      slidingDuration 
+      slidingDuration,
+      slideInDelay,
+      secondSlideDelay
     } = this
-    
-    console.log(activeIndex, index)
     
     // Stop if asking for the same slide
     if (index && index === activeIndex) return
 
     // Define updated information
     let newActiveIndex = index ? repeatIndex.call(this, index) : 0
-    let direction = activeIndex < newActiveIndex ? 'left' : 'right'
+    let direction = activeIndex <= newActiveIndex ? 'left' : 'right'
 
     // Define previous and next nodes
     let previousNode = slideNodes[activeIndex]
     let nextNode = slideNodes[newActiveIndex]
 
+    // Slide total duration is duration + delay
+    let totalDuration = slidingDuration + secondSlideDelay * 2
+    
     // Animation state 1: 
     if (previousNode !== nextNode) 
-      animateOut(previousNode, direction, slidingDuration)
+      animateOut(previousNode, direction, totalDuration)
     
     // Animation state 2: 
     let timeout = window.setTimeout(() => {
-      animateIn(nextNode, direction, slidingDuration)
+      animateIn(nextNode, direction, totalDuration)
       window.clearTimeout(timeout)
     }, slidingDuration)
 
@@ -90,24 +95,19 @@ const compose = (...fns) =>
     else if (index > lastIndex) return 0
     return index
   }
-
   
   function animateOut (previousNode, direction, slidingDuration) {
+    previousNode.classList.remove('left', 'right')
     previousNode.classList.add('out', direction)
 
     let timeout = window.setTimeout(() => {
-      previousNode.classList.remove('active', 'out', 'in', 'left', 'right')
+      previousNode.classList.remove('out', 'in', 'left', 'right')
       window.clearTimeout(timeout)
     }, slidingDuration)
   }
 
   function animateIn (nextNode, direction, slidingDuration) {
-    nextNode.classList.add('active', 'in', direction)
-    
-    let timeout = window.setTimeout(() => {
-      nextNode.classList.remove('in', direction)
-      window.clearTimeout(timeout)
-    }, slidingDuration)
+    nextNode.classList.add('in', direction)
   }
 
   /** 
