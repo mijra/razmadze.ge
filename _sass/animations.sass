@@ -1,6 +1,8 @@
 $animationDuration: 750ms
 $animationDelay: 200ms
 $slidingDistance: 25%
+$cubicBezierIn: cubic-bezier(0, 0, .5, 1)
+$cubicBezierOut: cubic-bezier(.35, 0, 1, .65)
 
 main.slider 
   transition: .8s ease opacity
@@ -33,12 +35,11 @@ main.slider
     .screen
       animation: both $animationDuration
     .in .screen
-      animation-timing-function: ease-out
+      animation-timing-function: $cubicBezierIn
       background-color: white
     .out .screen
-      animation-timing-function: ease-in
+      animation-timing-function: $cubicBezierOut
       animation-duration: $animationDuration * 2
-
     &.left
       .in .screen
         animation-name: slideInLeftFull
@@ -55,7 +56,7 @@ main.slider
   .screen > h1,
   .screen > h2 
     visibility: hidden 
-    
+
   .in
     &.project .screen,
     .screen > h1,
@@ -92,11 +93,11 @@ main.slider
   
   .in .description
     animation-name: fadeIn
-    animation-timing-function: ease-in
+    animation-timing-function: $cubicBezierIn
   
   .out .description
     animation-name: fadeOut
-    animation-timing-function: ease-out
+    animation-timing-function: $cubicBezierOut
 
 
 // slides fully left
