@@ -4,7 +4,6 @@
   top: 100%
   right: 0
   padding: 2vh 0
-  z-index: 7
 
   &.arrows
     transform: translate3d(0, 20%, 1px)
@@ -14,6 +13,7 @@
 
 .menu
   right: 7.5vw
+  z-index: 8
 
   a
     display: inline-block
@@ -25,12 +25,34 @@
   @media only screen and (max-width: 1024px)
     display: none
 
+  @media only screen and (min-width: 1024px) and (max-height: 320px)
+    right: 50%
+    transform: translate3d(50%, 0, 0)
 
 .arrows
+  z-index: 7
+  
   svg
     width: 32px
     margin-left: .35em
+    margin-bottom: .65em
     cursor: pointer
 
     &:hover
       color: lighten(black, 10%)
+
+  @media only screen and (max-width: 360px)
+    svg
+      display: block
+  
+  @media only screen and (max-height: 480px)
+    margin-top: .2em
+  
+  // watch
+  @media only screen and (max-width: 680px) and (max-height: 360px), (max-width: 320px), (max-height: 320px)
+    width: 100%
+    svg
+      display: inline
+      margin: 0
+      &:nth-child(2)
+        float: right

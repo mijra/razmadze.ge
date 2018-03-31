@@ -70,6 +70,7 @@ const createArray = (length) =>
 
     // Define updated information
     let newActiveIndex = index ? repeatIndex.call(this, index) : 0
+    console.log(direction)
     updateDirection.call(this, direction)
 
     // Define previous and next nodes
@@ -133,6 +134,9 @@ const createArray = (length) =>
     nextNode.classList.add('in')
   }
 
+  /**
+   * Update direction class
+   */
   function updateDirection (dir) {
     let direction = dir > 0 ? 'left' : 'right'
     this.rootNode.classList.remove('left', 'right')
@@ -171,9 +175,9 @@ const createArray = (length) =>
 
     // Add event listeners
     leftArrow.addEventListener('click', () => 
-      slideSwitcher.call(that, that.activeIndex - 1), -1)
+      slideSwitcher.call(that, that.activeIndex - 1, -1))
     rightArrow.addEventListener('click', () => 
-      slideSwitcher.call(that, that.activeIndex + 1), 1)
+      slideSwitcher.call(that, that.activeIndex + 1, 1))
   }
 
   /** 

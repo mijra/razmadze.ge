@@ -12,8 +12,6 @@ html
   font-family: 'Noto Sans', sans-serif
   -webkit-font-smoothing: antialiased
   box-sizing: border-box
-
-html
   position: relative
   height: 100%
   overflow: hidden
@@ -24,11 +22,29 @@ body
   position: relative
   height: calc(100% - 7.5vmin)
 
-  @media only screen and (max-width: 1024px)
+  @media only screen and (min-width: 680px) and (max-height: 680px)
+    height: calc(100% - 10vh)
+
+  @media only screen and (min-width: 680px) and (max-height: 480px)
     height: calc(100% - 15vh)
 
-  @media only screen and (max-height: 640px)
+  @media only screen and (min-width: 680px) and (max-height: 360px)
     height: calc(100% - 20vh)
+
+  @media only screen and (max-width: 680px)
+    height: calc(100% - 15vh)
+
+  @media only screen and (max-width: 680px) and (max-height: 680px)
+    height: calc(100% - 20vh)
+
+  @media only screen and (max-width: 680px) and (max-height: 480px)
+    height: calc(100% - 27.5vh)
+
+  @media only screen and (max-width: 680px) and (max-height: 360px)
+    height: calc(100% - 35vh)
+
+  @media only screen and (max-width: 680px) and (max-height: 360px), (max-width: 320px), (max-height: 320px)
+    height: calc(100% - 17.5vh)
 
 main.slider
   position: relative
