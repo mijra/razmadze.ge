@@ -1,0 +1,46 @@
+.menu,
+.arrows 
+  position: absolute
+  top: 100%
+  right: 0
+  padding: 2vh 0
+
+  &.arrows,
+  &.menu > a
+    opacity: 0
+    transition: 1s ease
+    transition-property: opacity, transform
+
+  &.arrows
+    transform: translate3d(0, 20%, 1px)
+
+  &.menu > a
+    transform: translate3d(0, 50%, 1px)
+
+.menu
+  right: 10vh
+
+  a
+    display: inline-block
+    cursor: pointer
+    padding: .25em 1vw
+    margin: .25em 1vh
+    text-transform: uppercase
+
+    &:nth-child(1)
+      transition-delay: 400ms
+
+    &:nth-child(2)
+      transition-delay: 300ms
+
+    &:nth-child(3)
+      transition-delay: 200ms
+
+.arrows
+  svg
+    width: 32px
+    margin-left: .35em
+    cursor: pointer
+
+    &:hover
+      color: lighten(black, 10%)

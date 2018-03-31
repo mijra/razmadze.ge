@@ -5,17 +5,21 @@
 
   <body>
     <main class="slider">
-      <!-- {{ site.posts }} -->
       {% for post in site.posts reversed %}
         {{ post }}
       {% endfor %}
 
+      <nav class="menu">
+        <a data-navigation-index="0">Home</a>
+        <a data-navigation-index="7">Works</a>
+        <a data-navigation-index="-1">Contact</a>
+      </nav>
+      
       <nav class="arrows">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><use xlink:href="#icon-arrow-left"></use></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><use xlink:href="#icon-arrow-right"></use></svg>
       </nav>
     </main>
-
   </body>
 </html>
 

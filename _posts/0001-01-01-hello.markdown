@@ -4,9 +4,9 @@ layout: post
 headline: Hello  
 headline2: Everyone
 
-title:  About site
-description: There is my Personal site and works, <br>Typography & Graphic Design
+title1: About site
+description1: There is my Personal site and works, <br>Typography & Graphic Design
 
-title2:  More info
+title2: More info
 description2: To find out other details, <br>please see the next pages
 ---

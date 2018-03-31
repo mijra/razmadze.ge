@@ -9,6 +9,7 @@ const compose = (...fns) =>
   const SETTINGS = {
     rootNode: document.querySelector('.slider'),
     slideNodes: document.querySelectorAll('.slide'),
+    menuItemNodes: document.querySelectorAll('.menu a'),
     arrowNodes: document.querySelectorAll('.arrows svg'),
 
     // slider settings
@@ -18,7 +19,8 @@ const compose = (...fns) =>
     slidingDuration: 750,
   }
 
-  SETTINGS.lastIndex = SETTINGS.slideNodes.length - 1
+  SETTINGS.slidesLength = SETTINGS.slideNodes.length
+  SETTINGS.lastIndex = SETTINGS.slidesLength - 1
 
   /**
    * Initialize website animations 
@@ -27,6 +29,7 @@ const compose = (...fns) =>
   window.onload = compose(
     initial.bind(SETTINGS),
     slideSwitcher.bind(SETTINGS, undefined, initial),
+    navigationItems.bind(SETTINGS),
     arrowsClickHandler.bind(SETTINGS),
     arrowsKeyHandler.bind(SETTINGS),
   )
@@ -117,6 +120,31 @@ const compose = (...fns) =>
   }
 
   /** 
+   * Naviation menu items clicking
+   * to switch the slide
+   */
+  function navigationItems () {
+    let that = this
+    let { menuItemNodes, slidesLength } = this
+
+    createArray(menuItemNodes.length).map((v, key) => {
+      let item = menuItemNodes[key]
+      let index = parseInt(item.dataset.navigationIndex)
+      if (index < 0) index = slidesLength + index
+      item.addEventListener('click', (e) => {
+        slideSwitcher.call(that, index)
+      })
+    })
+  } 
+
+  /**
+   * Make new array and fill with undefined
+   */
+  function createArray (length) {
+    return (new Array(length)).fill(void 0)
+  }
+
+  /** 
    * Arrows Triggering
    * on pressing arrow icons
    */
@@ -153,4 +181,5 @@ const compose = (...fns) =>
         slideSwitcher.call(that, activeIndex + direction)
     })
   } 
+
 })()

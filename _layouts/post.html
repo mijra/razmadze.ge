@@ -6,13 +6,18 @@ layout: post
 {% else %}
   <figure class="slide">
 {% endif %}
-  
+
   <div class="overflow">
     {% if page.image %}
       <div class="screen" style="background-image: url({{ page.image }})" />
     {% else %}
       <div class="screen">
-        <h1>{{ page.date | date: "%d" }}</h1>
+        {% if page.icon %}
+          <h1>{{ page.icon }}</h1>
+        {% else %}
+          <h1>{{ page.date | date: "%d" }}</h1>
+        {% endif %}
+
         <h2>
           <div>{{ page.headline }}</div>
           <div>{{ page.headline2 }}</div>
@@ -22,11 +27,13 @@ layout: post
   </div>
 
   <figcaption class="description">
-    <h5>{{ page.title }}</h5>
-    <p>{{ page.description }}</p>
+    <h5>{{ page.title1 }}</h5>
+    <p>{{ page.description1 }}</p>
   </figcaption>
   <figcaption class="description">
     <h5>{{ page.title2 }}</h5>
     <p>{{ page.description2 }}</p>
   </figcaption>
+
+  {{page}}
 </figure>

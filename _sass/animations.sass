@@ -9,6 +9,7 @@ main.slider
   &.ready
     opacity: 1
     
+    .menu > a,
     .arrows
       opacity: 1
       transform: translate3d(0, 0, 1px)
@@ -58,6 +59,7 @@ main.slider
     transform: translate3d(0, 0, 1px)
   100%
     transform: translate3d(100%, 0, 1px)
+
 
 .description
   transition: 1s ease
@@ -123,7 +125,6 @@ figure.slide
   100%
     visibility: hidden
     opacity: 0
-
 
 // moving left
 @keyframes slideInLeft
