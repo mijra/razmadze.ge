@@ -22,7 +22,13 @@ body
   margin: 0
   font-size: 1.4rem
   position: relative
-  height: calc(100% - 8vmin)
+  height: calc(100% - 7.5vmin)
+
+  @media only screen and (max-width: 1024px)
+    height: calc(100% - 15vh)
+
+  @media only screen and (max-height: 640px)
+    height: calc(100% - 20vh)
 
 main.slider
   position: relative

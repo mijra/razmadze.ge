@@ -39,6 +39,8 @@
   h2
     margin: 0
     line-height: 1
+    transition: .15s ease
+    transition-property: font-size, bottom
 
   h1 
     font-size: 32vh
@@ -46,7 +48,18 @@
     background: white
 
   h2 
-    font-size: 15vh
-    margin-top: 4vh
+    position: absolute
+    font-size: 14vmin
+    bottom: 3vmax
+    left: 3vmax
     word-break: break-word
+    
+  @media only screen and (max-width: 1440px)
+    h2
+      font-size: 11vmin
 
+  @media only screen and (max-width: 1024px)
+    h1 
+      font-size: 28vmin
+    h2
+      font-size: 8vmin

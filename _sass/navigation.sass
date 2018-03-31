@@ -4,6 +4,7 @@
   top: 100%
   right: 0
   padding: 2vh 0
+  z-index: 7
 
   &.arrows
     transform: translate3d(0, 20%, 1px)
@@ -12,7 +13,7 @@
     transform: translate3d(0, 50%, 1px)
 
 .menu
-  right: 10vh
+  right: 7.5vw
 
   a
     display: inline-block
@@ -20,6 +21,10 @@
     padding: .25em 1vw
     margin: .25em 1vh
     text-transform: uppercase
+
+  @media only screen and (max-width: 1024px)
+    display: none
+
 
 .arrows
   svg
