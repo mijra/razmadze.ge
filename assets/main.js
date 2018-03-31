@@ -5,6 +5,9 @@ const compose = (...fns) =>
     value => value
   )
 
+const createArray = (length) =>
+  (new Array(length)).fill(void 0)
+
 ;(function(){
   const SETTINGS = {
     rootNode: document.querySelector('.slider'),
@@ -19,6 +22,7 @@ const compose = (...fns) =>
     slidingDuration: 750,
   }
 
+  SETTINGS.activeNode = SETTINGS.slideNodes[SETTINGS.activeIndex]
   SETTINGS.slidesLength = SETTINGS.slideNodes.length
   SETTINGS.lastIndex = SETTINGS.slidesLength - 1
 
@@ -48,7 +52,7 @@ const compose = (...fns) =>
   /**
    * Switching a slide
    */
-  function slideSwitcher (index) {
+  function slideSwitcher (index, direction = 1) {
     let { 
       rootNode, 
       slideNodes,
@@ -56,7 +60,9 @@ const compose = (...fns) =>
       lastIndex, 
       slidingDuration,
       slideInDelay,
-      secondSlideDelay
+      secondSlideDelay,
+      activeNode,
+      slidesLength,
     } = this
     
     // Stop if asking for the same slide
@@ -64,7 +70,7 @@ const compose = (...fns) =>
 
     // Define updated information
     let newActiveIndex = index ? repeatIndex.call(this, index) : 0
-    let direction = activeIndex <= newActiveIndex ? 'left' : 'right'
+    updateDirection.call(this, direction)
 
     // Define previous and next nodes
     let previousNode = slideNodes[activeIndex]
@@ -78,18 +84,19 @@ const compose = (...fns) =>
 
     // Slide total duration is duration + delay
     let totalDuration = slidingDuration + secondSlideDelay * 2
-    
+
     // Animation state 1: 
     if (previousNode !== nextNode) 
-      animateOut(previousNode, direction, totalDuration)
-    
+      animateOut.call(this, previousNode)
+
     // Animation state 2: 
     let timeout = window.setTimeout(() => {
-      animateIn(nextNode, direction, totalDuration)
+      animateIn.call(this, nextNode)
       window.clearTimeout(timeout)
     }, isProject ? 0 : slidingDuration)
 
     // Update active slide index in Settings
+    this.activeNode = nextNode
     this.activeIndex = newActiveIndex
   }
 
@@ -104,21 +111,34 @@ const compose = (...fns) =>
     else if (index > lastIndex) return 0
     return index
   }
-  
-  function animateOut (previousNode, direction, slidingDuration) {
-    previousNode.classList.remove('left', 'right')
-    previousNode.classList.add('out', direction)
 
+  /**
+   * Animating out the slide
+   */
+  function animateOut (previousNode) {
+    let that = this
+    previousNode.classList.add('out')
+    
     let timeout = window.setTimeout(() => {
-      previousNode.classList.remove('out', 'in', 'left', 'right')
+      // if (!previousNode.isEqualNode(that.activeNode))
+        previousNode.classList.remove('out', 'in')
       window.clearTimeout(timeout)
-    }, slidingDuration)
+    }, that.slidingDuration)
   }
 
-  function animateIn (nextNode, direction, slidingDuration) {
-    nextNode.classList.add('in', direction)
+  /**
+   * Animating in the slide
+   */
+  function animateIn (nextNode) {
+    nextNode.classList.add('in')
   }
 
+  function updateDirection (dir) {
+    let direction = dir > 0 ? 'left' : 'right'
+    this.rootNode.classList.remove('left', 'right')
+    this.rootNode.classList.add(direction)
+  }
+  
   /** 
    * Naviation menu items clicking
    * to switch the slide
@@ -127,6 +147,7 @@ const compose = (...fns) =>
     let that = this
     let { menuItemNodes, slidesLength } = this
 
+    // run on nodes as array items
     createArray(menuItemNodes.length).map((v, key) => {
       let item = menuItemNodes[key]
       let index = parseInt(item.dataset.navigationIndex)
@@ -135,13 +156,6 @@ const compose = (...fns) =>
         slideSwitcher.call(that, index)
       })
     })
-  } 
-
-  /**
-   * Make new array and fill with undefined
-   */
-  function createArray (length) {
-    return (new Array(length)).fill(void 0)
   }
 
   /** 
@@ -157,9 +171,9 @@ const compose = (...fns) =>
 
     // Add event listeners
     leftArrow.addEventListener('click', () => 
-      slideSwitcher.call(that, that.activeIndex - 1))
+      slideSwitcher.call(that, that.activeIndex - 1), -1)
     rightArrow.addEventListener('click', () => 
-      slideSwitcher.call(that, that.activeIndex + 1))
+      slideSwitcher.call(that, that.activeIndex + 1), 1)
   }
 
   /** 
@@ -178,7 +192,7 @@ const compose = (...fns) =>
       
       // Run the function only on arrow keys
       if (keyCode === 37 || keyCode === 39)
-        slideSwitcher.call(that, activeIndex + direction)
+        slideSwitcher.call(that, activeIndex + direction, direction)
     })
   } 
 

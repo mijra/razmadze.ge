@@ -6,35 +6,100 @@ main.slider
   transition: .8s ease opacity
   opacity: 0
 
+  // loading
+  .menu > a,
+  .arrows
+    opacity: 0
+    transition: 1s ease
+    transition-property: opacity, transform
+
+  .menu > a
+    &:nth-child(1)
+      transition-delay: 400ms
+    &:nth-child(2)
+      transition-delay: 300ms
+    &:nth-child(3)
+      transition-delay: 200ms
+
   &.ready
     opacity: 1
-    
     .menu > a,
     .arrows
       opacity: 1
       transform: translate3d(0, 0, 1px)
 
-  &.move 
+  // slides full moving
+  &.move
     .screen
       animation: both $animationDuration
-    figure.in
-      .screen
-        background-color: white
-        animation-timing-function: ease-out
-      &.left .screen
+    .in .screen
+      animation-timing-function: ease-out
+      background-color: white
+    .out .screen
+      animation-timing-function: ease-in
+      animation-duration: $animationDuration * 2
+
+    &.left
+      .in .screen
         animation-name: slideInLeftFull
-      &.right .screen
-        animation-name: slideInRightFull
-    figure.out
-      .screen
-        animation-timing-function: ease-in
-        animation-duration: $animationDuration * 2
-      &.left .screen
+      .out .screen
         animation-name: slideOutLeftFull
-      &.right .screen
+    &.right
+      .in .screen
+        animation-name: slideInRightFull
+      .out .screen
         animation-name: slideOutRightFull
+
+  // slides visibility
+  .project .screen,
+  .screen > h1,
+  .screen > h2 
+    visibility: hidden 
+    
+  .in
+    &.project .screen,
+    .screen > h1,
+    .screen > h2 
+      visibility: visible
+
+  // headlines
+  .headline
+    animation: both $animationDuration
+  &.left
+    .in .headline
+      animation-name: fadeIn, slideInLeft
+    .out .headline
+      animation-name: fadeOut, slideOutLeft
+  &.right
+    .in .headline
+      animation-name: fadeIn, slideInRight
+    .out .headline
+      animation-name: fadeOut, slideOutRight
+
+  // headlines delaying
+  &.left .headline:nth-child(2)
+    animation-duration: $animationDuration + $animationDelay
+  &.right .headline:nth-child(1)
+    animation-duration: $animationDuration + $animationDelay
+
+  // description
+  .description
+    animation: both $animationDuration
+    transition: 1s ease
+    transition-property: opacity, visibility, transform
+    opacity: 0
+    visibility: hidden
   
-// full sliding moving left
+  .in .description
+    animation-name: fadeIn
+    animation-timing-function: ease-in
+  
+  .out .description
+    animation-name: fadeOut
+    animation-timing-function: ease-out
+
+
+// slides fully left
 @keyframes slideInLeftFull
   0% 
     transform: translate3d(100%, 0, 1px)
@@ -47,7 +112,7 @@ main.slider
   100%
     transform: translate3d(-100%, 0, 1px)
 
-// full sliding moving right
+// slides fully right
 @keyframes slideInRightFull
   0% 
     transform: translate3d(-100%, 0, 1px)
@@ -60,73 +125,7 @@ main.slider
   100%
     transform: translate3d(100%, 0, 1px)
 
-
-.description
-  transition: 1s ease
-  transition-property: opacity, visibility, transform
-  opacity: 0
-  visibility: hidden
-  
-figure.slide
-  .description,
-  h2 > div
-    animation: both $animationDuration
-
-  &.left h2 > div:nth-child(2)
-    animation-duration: $animationDuration + $animationDelay
-
-  &.right h2 > div:nth-child(1)
-    animation-duration: $animationDuration + $animationDelay
-
-  &.project .screen,
-  .screen > h1,
-  .screen > h2 
-    visibility: hidden
-  
-  &.in
-    .description
-      animation-name: fadeIn
-      animation-timing-function: ease-in
-
-    &.project .screen,
-    .screen > h1,
-    .screen > h2 
-      visibility: visible
-
-    &.left h2 > div
-      animation-name: fadeIn, slideInLeft
-
-    &.right h2 > div
-      animation-name: fadeIn, slideInRight
-
-  &.out
-    .description
-      animation-name: fadeOut
-      animation-timing-function: ease-out
-
-    &.left h2 > div
-      animation-name: fadeOut, slideOutLeft
-
-    &.right h2 > div
-      animation-name: fadeOut, slideOutRight
-
-@keyframes fadeIn
-  0% 
-    visibility: hidden
-    opacity: 0
-  100%
-    visibility: visible
-    opacity: 1
-
-@keyframes fadeOut
-  0% 
-    visibility: visible
-    opacity: 1
-  100%
-    visibility: hidden
-    opacity: 0
-
-// moving left
+// headlines left
 @keyframes slideInLeft
   0% 
     transform: translate3d($slidingDistance, 0, 1px)
@@ -139,7 +138,7 @@ figure.slide
   100%
     transform: translate3d(-$slidingDistance, 0, 1px)
 
-// moving right
+// headlines right
 @keyframes slideInRight
   0% 
     transform: translate3d(-$slidingDistance, 0, 1px)
@@ -151,3 +150,19 @@ figure.slide
     transform: translate3d(0, 0, 1px)
   100%
     transform: translate3d($slidingDistance, 0, 1px)
+
+@keyframes fadeIn
+  0% 
+    visibility: hidden
+    opacity: 0
+  100%
+    visibility: visible
+    opacity: 1
+
+@keyframes fadeOut
+    0% 
+      visibility: visible
+      opacity: 1
+    100%
+      visibility: hidden
+      opacity: 0
