@@ -124,27 +124,28 @@
     ~ .menu
       visibility: visible
       opacity: 1
-
     ~ .hamburger
       .icon-hamburger
         display: none
       .icon-close
         display: inline-block
-        
 
 .hamburger
   background: black
   z-index: 9
 
+  .icon
+    font-size: 1.8rem
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%, -50%, 0)
+    margin-top: -1px
+    margin-right: -1px
+  
   .icon:before
     font-family: 'Saiti-Black', 'Noto Sans', sans-serif
     color: white
   
   .icon-close
     display: none
-
-.icon-close
-  content: '🍔'
-
-.icon-close
-  content: '✖️'
