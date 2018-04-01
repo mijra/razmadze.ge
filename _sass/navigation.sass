@@ -119,10 +119,30 @@
   cursor: pointer
 
   &:checked
-    & ~ .menu
+    ~ .menu
       visibility: visible
       opacity: 1
+
+    ~ .hamburger
+      .icon-hamburger
+        display: none
+      .icon-close
+        display: inline-block
+        
 
 .hamburger
   background: black
   z-index: 9
+
+  .icon:before
+    font-family: 'Saiti-Black', 'Noto Sans', sans-serif
+    color: white
+  
+  .icon-close
+    display: none
+
+.icon-close
+  content: 'X'
+
+.icon-close
+  content: 'E'
