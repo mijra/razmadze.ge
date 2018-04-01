@@ -1,7 +1,7 @@
 ---
 layout: post
 
-icon: ">"
+icon: "✉️"
 
 headline: contact@
 headline2: razmadze.ge
