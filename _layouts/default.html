@@ -9,14 +9,14 @@
         {{ post }}
       {% endfor %}
 
-      <input class="menu-checkbox" type="checkbox">
+      <input class="menu-checkbox" type="checkbox" id="detach-menu">
       <span class="hamburger"></span>
       <nav class="menu">
-        <div class="responsive-adjuster">
+        <label class="responsive-adjuster" for="detach-menu">
           <a data-navigation-index="0">Home</a>
           <a data-navigation-index="7">Works</a>
           <a data-navigation-index="-1">Contact</a>
-        </div>
+        </label>
       </nav>
       
       <nav class="arrows">

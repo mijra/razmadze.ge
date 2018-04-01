@@ -26,7 +26,7 @@
   @media only screen and (min-width: 1024px) and (max-height: 320px)
     right: 50%
     transform: translate3d(50%, 0, 0)
-
+  
   @media only screen and (max-width: 1024px)
     transition: .35s ease 
     transition-property: visibility, opacity
@@ -56,6 +56,22 @@
     .responsive-adjuster a
       display: block
       font-size: 2.4rem
+
+  @media only screen and (max-width: 680px) and (max-height: 420px)
+    .responsive-adjuster
+      width: 90%
+      
+      a
+        display: inline-block
+        font-size: 1.8rem
+
+  @media only screen and (max-width: 360px) and (max-height: 360px)
+    .responsive-adjuster a
+      display: block
+      padding-left: 0
+      padding-right: 0
+      margin-left: 0
+      margin-right: 0
 
 .arrows
   z-index: 7
@@ -93,6 +109,9 @@
   width: 4.2rem
   height: 4.2rem
   margin: 0
+
+  @media only screen and (min-width: 1024px)
+    display: none
 
 .menu-checkbox
   opacity: 0
