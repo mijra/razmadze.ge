@@ -9,13 +9,13 @@ main.slider
   opacity: 0
 
   // loading
-  .menu > a,
+  .menu a,
   .arrows
     opacity: 0
     transition: 1s ease
     transition-property: opacity, transform
 
-  .menu > a
+  .menu a
     &:nth-child(1)
       transition-delay: 400ms
     &:nth-child(2)
@@ -25,7 +25,7 @@ main.slider
 
   &.ready
     opacity: 1
-    .menu > a,
+    .menu a,
     .arrows
       opacity: 1
       transform: translate3d(0, 0, 1px)
