@@ -1,12 +1,12 @@
 ---
 layout: post
 
-headline: And you 
-headline2: can too
+headline: You can 
+headline2: help me
 
 title1:  Co-operation
-description1: Customer is not a client, customer <br>is an important part of work.
+description1: client is not an user, client is an important part of work.
 
 title2:  Feedback
-description2: The customer's contribution with feedback <br>and friendly attitude always helps the process.
+description2: The client’s contribution with feedback and friendly attitude always helps the process.
 ---
