@@ -15,6 +15,10 @@ html
   position: relative
   height: 100%
   overflow: hidden
+  
+  @media print
+    -webkit-print-color-adjust: exact
+    overflow: auto
 
   @media (min-aspect-ratio: 3/1), (max-aspect-ratio: 1/3)
     padding: 10vmin 10vmin
@@ -33,7 +37,10 @@ main.slider
   height: 100%
   paddion: 2px
   background: white
-  border: 2px solid black
+
+  @media only screen
+    border: 2px solid black
+
 
 .kokofont
   font-family: 'Saiti-Black'
@@ -41,3 +48,4 @@ main.slider
   line-height: 1em
   display: inline-block
   vertical-align: top
+

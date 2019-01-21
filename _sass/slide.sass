@@ -14,9 +14,6 @@
 
   &.out
     z-index: 5
-  
-  @media print
-    top: auto
 
 .slide .overflow
   position: absolute
@@ -91,3 +88,17 @@
     @media (min-aspect-ratio: 11/5)
       h2
         left: calc(32vmin + 3vmax)
+
+@media print
+  .slide
+    position: relative
+    page-break-after: always
+    border: 2px solid black
+
+    &:not(:first-child)
+      margin-top: 6vmax
+
+    &:last-of-type
+      background: white
+      z-index: 100
+      height: calc(100% + 2.1vh + 4rem)

@@ -6,10 +6,12 @@
   padding: 2vh 0 0
   margin-left: -2px
 
-  transition: 1s ease
-  transition-property: opacity, visibility, transform
-  opacity: 0
-  visibility: hidden
+  @media only screen
+    transition: 1s ease
+    transition-property: opacity, visibility, transform
+
+    opacity: 0
+    visibility: hidden
 
   h5
     margin: 0

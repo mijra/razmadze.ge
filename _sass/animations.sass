@@ -4,100 +4,101 @@ $slidingDistance: 25%
 $cubicBezierIn: cubic-bezier(0, 0, .5, 1)
 $cubicBezierOut: cubic-bezier(.35, 0, 1, .65)
 
-main.slider 
-  transition: .8s ease opacity
-  opacity: 0
-
-  // loading
-  .menu a,
-  .arrows
+@media only screen
+  main.slider 
+    transition: .8s ease opacity
     opacity: 0
-    transition: 1s ease
-    transition-property: opacity, transform
 
-  .menu a
-    &:nth-child(1)
-      transition-delay: 400ms
-    &:nth-child(2)
-      transition-delay: 300ms
-    &:nth-child(3)
-      transition-delay: 200ms
-
-  &.ready
-    opacity: 1
+    // loading
     .menu a,
     .arrows
+      opacity: 0
+      transition: 1s ease
+      transition-property: opacity, transform
+
+    .menu a
+      &:nth-child(1)
+        transition-delay: 400ms
+      &:nth-child(2)
+        transition-delay: 300ms
+      &:nth-child(3)
+        transition-delay: 200ms
+
+    &.ready
       opacity: 1
-      transform: translate3d(0, 0, 1px)
+      .menu a,
+      .arrows
+        opacity: 1
+        transform: translate3d(0, 0, 1px)
 
-  // slides full moving
-  &.move
-    .screen
-      animation: both $animationDuration
-    .in .screen
-      animation-timing-function: $cubicBezierIn
-      background-color: white
-    .out .screen
-      animation-timing-function: $cubicBezierOut
-      animation-duration: $animationDuration * 2
-    &.left
+    // slides full moving
+    &.move
+      .screen
+        animation: both $animationDuration
       .in .screen
-        animation-name: slideInLeftFull
+        animation-timing-function: $cubicBezierIn
+        background-color: white
       .out .screen
-        animation-name: slideOutLeftFull
-    &.right
-      .in .screen
-        animation-name: slideInRightFull
-      .out .screen
-        animation-name: slideOutRightFull
+        animation-timing-function: $cubicBezierOut
+        animation-duration: $animationDuration * 2
+      &.left
+        .in .screen
+          animation-name: slideInLeftFull
+        .out .screen
+          animation-name: slideOutLeftFull
+      &.right
+        .in .screen
+          animation-name: slideInRightFull
+        .out .screen
+          animation-name: slideOutRightFull
 
-  // slides visibility
-  .project .screen,
-  .screen > h1,
-  .screen > h2 
-    visibility: hidden 
-
-  .in
-    &.project .screen,
+    // slides visibility
+    .project .screen,
     .screen > h1,
     .screen > h2 
-      visibility: visible
+      visibility: hidden 
 
-  // headlines
-  .headline
-    animation: both $animationDuration
-  &.left
-    .in .headline
-      animation-name: fadeIn, slideInLeft
-    .out .headline
-      animation-name: fadeOut, slideOutLeft
-  &.right
-    .in .headline
-      animation-name: fadeIn, slideInRight
-    .out .headline
-      animation-name: fadeOut, slideOutRight
+    .in
+      &.project .screen,
+      .screen > h1,
+      .screen > h2 
+        visibility: visible
 
-  // headlines delaying
-  &.left .headline:nth-child(2)
-    animation-duration: $animationDuration + $animationDelay
-  &.right .headline:nth-child(1)
-    animation-duration: $animationDuration + $animationDelay
+    // headlines
+    .headline
+      animation: both $animationDuration
+    &.left
+      .in .headline
+        animation-name: fadeIn, slideInLeft
+      .out .headline
+        animation-name: fadeOut, slideOutLeft
+    &.right
+      .in .headline
+        animation-name: fadeIn, slideInRight
+      .out .headline
+        animation-name: fadeOut, slideOutRight
 
-  // description
-  .description
-    animation: both $animationDuration
-    transition: 1s ease
-    transition-property: opacity, visibility, transform
-    opacity: 0
-    visibility: hidden
-  
-  .in .description
-    animation-name: fadeIn
-    animation-timing-function: $cubicBezierIn
-  
-  .out .description
-    animation-name: fadeOut
-    animation-timing-function: $cubicBezierOut
+    // headlines delaying
+    &.left .headline:nth-child(2)
+      animation-duration: $animationDuration + $animationDelay
+    &.right .headline:nth-child(1)
+      animation-duration: $animationDuration + $animationDelay
+
+    // description
+    .description
+      animation: both $animationDuration
+      transition: 1s ease
+      transition-property: opacity, visibility, transform
+      opacity: 0
+      visibility: hidden
+    
+    .in .description
+      animation-name: fadeIn
+      animation-timing-function: $cubicBezierIn
+    
+    .out .description
+      animation-name: fadeOut
+      animation-timing-function: $cubicBezierOut
 
 
 // slides fully left
