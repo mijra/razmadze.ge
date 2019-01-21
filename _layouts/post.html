@@ -1,6 +1,7 @@
 ---
 layout: post
 ---
+
 {% if page.category %}
   <figure class="project slide">
 {% else %}
@@ -9,7 +10,20 @@ layout: post
 
   <div class="overflow">
     {% if page.image %}
-      <div class="screen" style="background-image: url({{ page.image }})"></div>
+      {% assign pageId = page.id | replace: "/", "" %}
+
+      <style>
+        #{{ pageId }} {
+          background-image: url({{ page.image }})
+        }
+        @media (max-aspect-ratio: 1/1) {
+          #{{ pageId }} {
+            background-image: url({{ page.mobile }}), url({{ page.image }})
+          }
+        }
+      </style>
+
+      <div class="screen" id="{{ pageId }}"></div>
     {% else %}
       <div class="screen">
         {% if page.icon %}

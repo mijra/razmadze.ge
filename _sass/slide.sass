@@ -29,7 +29,8 @@
   height: 100%
   top: 0
   left: 0
-  background-size: cover
+  background-size: cover, cover
+  background-position: center
   box-sizing: border-box
   font-family: 'Saiti-Black', 'Noto Sans', sans-serif
   padding: 1vmax 3vmax
@@ -39,47 +40,54 @@
   h2
     margin: 0
     line-height: 1
-    transition: .15s ease
-    transition-property: font-size, bottom
 
   h1 
-    font-size: 32vh
+    font-size: 28vmin
     height: 1em
     background: white
 
-  h2 
+  h2
     position: absolute
-    font-size: 18vmin
     bottom: 3vmax
     left: 3vmax
     word-break: break-word
+
+  @media (min-aspect-ratio: 5/4)
+    h2
+      font-size: 15vh
+  
+  @media (max-aspect-ratio: 5/4)
+    h2
+      font-size: 9vw
     
-  @media only screen and (max-width: 1440px)
-    h2
-      font-size: 15vmin
+  // @media only screen and (max-width: 1360px)
+  //   h2
+  //     font-size: 13vh
 
-  @media only screen and (max-width: 1024px)
-    h1 
-      font-size: 28vmin
-    h2
-      font-size: 9vmin
+  // @media only screen and (max-width: 1280px)
+  //   h2
+  //     font-size: 10vh
 
-  @media only screen and (min-width: 680px) and (max-height: 480px)
-    h1
-      position: absolute
-      top: 50%
-      left: 3vmax
-      transform: translate3d(0, -50%, 0)
-    h2
-      bottom: auto
-      top: 50%
-      left: 48vmin
-      transform: translate3d(0, -50%, 0)
+  // @media only screen and (max-width: 1024px)
+  //   h2
+  //     font-size: 8vh
 
-  @media only screen and (min-width: 680px) and (max-height: 420px)
-    h2
-      left: 64vmin
+  // @media only screen and (min-width: 680px) and (max-height: 480px)
+  //   h1
+  //     position: absolute
+  //     top: 50%
+  //     left: 3vmax
+  //     transform: translate3d(0, -50%, 0)
+  //   h2
+  //     bottom: auto
+  //     top: 50%
+  //     left: 48vmin
+  //     transform: translate3d(0, -50%, 0)
 
-  @media only screen and (min-width: 680px) and (max-height: 280px)
-    h2
-      left: 72vmin
+  // @media only screen and (min-width: 680px) and (max-height: 420px)
+  //   h2
+  //     left: 64vmin
+
+  // @media only screen and (min-width: 680px) and (max-height: 280px)
+  //   h2
+  //     left: 72vmin

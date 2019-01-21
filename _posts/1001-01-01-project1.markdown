@@ -2,10 +2,11 @@
 layout: post
 category: project
 
-image: https://mir-s3-cdn-cf.behance.net/project_modules/1400/405aad57040901.59ec5d516c5d4.jpg
+image: https://cl.ly/d32de0ab55de/screen.jpg
+mobile: https://cl.ly/24ad6637f5ed/mobile.jpg
 
-title1: Metro Tbilisi v2
-description1: Branding, Typography, <br>Graphic, Design
+title1: Internet
+description1: Georgian letters from the <br>typeface designed for Silknet
 
 title2: Second Title
 description2: Subtitle here about something<br>aqac meore xazze ewereba xolme rame

@@ -1,7 +1,7 @@
 ---
 layout: post
 
-headline: Hello  
+headline: Hello
 headline2: Everyone
 
 title1: About site

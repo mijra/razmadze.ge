@@ -2,7 +2,8 @@
 layout: post
 category: project
 
-image: https://mir-s3-cdn-cf.behance.net/project_modules/1400/9bb2c753333119.59305d5c03e54.gif
+image: https://cl.ly/47d2739abc5c
+mobile: https://cl.ly/47d2739abc5c
 
 title1: MOOSIK Breaks Free
 description1: Art Direction, Branding, Illustration<br>aq ori xazi unda iyos toma
