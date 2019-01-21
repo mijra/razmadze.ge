@@ -29,10 +29,17 @@
     &.active 
       font-weight: 700
 
-  @media only screen and (min-width: 1024px) and (max-height: 320px)
+  @media only screen and (min-width: 1921px), (min-height: 1281px)
+    a
+      font-size: 1.5rem
+
+  @media only screen and (min-width: 1025px) and (max-height: 320px)
     right: 50%
     transform: translate3d(50%, 0, 0)
-  
+
+  @media only screen and (max-width: 1366px)
+    right: 120px
+
   @media only screen and (max-width: 1024px)
     transition: .35s ease 
     transition-property: visibility, opacity
@@ -78,6 +85,9 @@
       margin-left: 0
       margin-right: 0
 
+  @media print
+    display: none
+
 .arrows
   z-index: 7
   margin-right: -3px
@@ -102,13 +112,22 @@
     margin-top: .2em
 
   // watch
-  @media only screen and (max-width: 680px) and (max-height: 360px), (max-width: 320px), (max-height: 320px)
-    width: 100%
+  @media only screen and (max-width: 680px) and (max-height: 420px), (max-width: 320px), (max-height: 320px)
+    width: calc(100% + 6px)
+    margin: 0
+    right: -3px
     i
       display: inline
       margin: 0
       &:nth-child(2)
         float: right
+
+  // print
+  @media print
+    i
+      &:first-child,
+      &.disabled
+        display: none
 
 .menu-checkbox,
 .hamburger
@@ -157,4 +176,10 @@
     color: white
 
   .icon-close
+    display: none
+
+  @media only screen and (max-width: 200px)
+    display: none
+
+  @media print
     display: none
