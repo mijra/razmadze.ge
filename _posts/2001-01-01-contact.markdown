@@ -5,4 +5,10 @@ icon: "✉️"
 
 headline: contact@
 headline2: razmadze.ge
+
+title1: Metro Tbilisi v2
+description1: Branding, Typography, <br>Graphic, Design
+
+title2: Second Title
+description2: Subtitle here about something<br>aqac meore xazze ewereba xolme rame
 ---
