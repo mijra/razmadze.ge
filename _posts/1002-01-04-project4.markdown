@@ -2,7 +2,7 @@
 layout: post
 category: project
 
-image: https://i.imgur.com/83GG0TJ.jpg
+image: https://i.imgur.com/pX3A2FC.jpg
 mobile: https://i.imgur.com/CLbzjSA.jpg
 
 title1: T-shirt
