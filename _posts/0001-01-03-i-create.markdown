@@ -8,5 +8,5 @@ title1: Typefaces
 description1: Typeface is the key component <br>of the communication design.
 
 title2: Uniqueness
-description2: The unique typeface makes the brands <br>outstanding and memorable.
+description2: The unique typeface makes the brand <br>outstanding and memorable.
 ---
