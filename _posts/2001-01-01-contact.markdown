@@ -10,5 +10,5 @@ title1: E-mail
 description1: I will always happy <br>to see your mails
 
 title2: But
-description2: I hope you don't want me<br>to finish project yesterday
+description2: I hope you don't want me<br>to finish the project yesterday
 ---
