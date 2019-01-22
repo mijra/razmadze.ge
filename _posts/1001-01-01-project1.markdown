@@ -5,9 +5,9 @@ category: project
 image: https://i.imgur.com/ahm50d7.jpg
 mobile: https://i.imgur.com/kG0WYay.jpg
 
-title1: Internet
+title1: Metro Tbilisi
 description1: Typeface project for Mtero Tbilisi <br>Master thesis project
 
-title2: Second Title
+title2: Created at:
 description2: Trier University of Applied Sciences <br>Supervisor: Prof. Andreas Hogan
 ---
