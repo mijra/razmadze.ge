@@ -1,7 +1,7 @@
 ---
 layout: post
 
-headline: Design 
+headline: And Design 
 headline2: Consulting 
 
 title1: Design
