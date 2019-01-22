@@ -1,0 +1,13 @@
+---
+layout: post
+category: project
+
+image: https://i.imgur.com/83GG0TJ.jpg
+mobile: https://i.imgur.com/CLbzjSA.jpg
+
+title1: T-shirt
+description1: Yelow T-shirt design <br>აუ გაჩე (Oh stop please)
+
+title2: Printed by
+description2: Maika.ge<br>2016
+---
