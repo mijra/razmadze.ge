@@ -1,0 +1,13 @@
+---
+layout: post
+category: project
+
+image: https://i.imgur.com/M7FYsDX.jpg
+mobile: https://i.imgur.com/mUZnT8E.jpg
+
+title1: Neue Frutiger
+description1: Georgian letters <br>for the typeface Neue Helvetica
+
+title2: Created for
+description2: Monotype<br>Bad Homburg
+---
