@@ -2,8 +2,8 @@
 layout: post
 category: project
 
-image: https://i.imgur.com/4s0A8gm.jpg
-mobile: https://i.imgur.com/p5d94tJ.jpg
+image: https://i.imgur.com/5GJEmSq.jpg
+mobile: https://i.imgur.com/W32ZxzI.jpg
 
 title1: Neue Helvetica
 description1: Georgian letters <br>for the typeface Neue Helvetica
