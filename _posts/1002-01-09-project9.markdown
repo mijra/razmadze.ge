@@ -1,0 +1,13 @@
+---
+layout: post
+category: project
+
+image: https://i.imgur.com/rVmH8bn.jpg
+mobile: https://i.imgur.com/z8B8Y0v.jpg
+
+title1: Frankfurt Book Fair
+description1: Design of modern serif Georgian letters <br>Letter ghan ღ (U+10E6)
+
+title2: Created for
+description2: cGeorgian pavilion <br>at Frankfurt Book Fair
+---
