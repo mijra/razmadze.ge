@@ -2,12 +2,12 @@
 layout: post
 category: project
 
-image: https://i.imgur.com/SPcGQu2.jpg
-mobile: https://i.imgur.com/as2R9pD.jpg
+image: https://i.imgur.com/ahm50d7.jpg
+mobile: https://i.imgur.com/kG0WYay.jpg
 
 title1: Internet
-description1: Georgian letters from the <br>typeface designed for Silknet
+description1: Typeface project for Mtero Tbilisi <br>Full project: https://goo.gl/YJH5rj
 
 title2: Second Title
-description2: Subtitle here about something<br>aqac meore xazze ewereba xolme rame
+description2: Trier University of Applied Sciences<br>Supervisor: Prof. Andreas Hogan
 ---
