@@ -1,0 +1,13 @@
+---
+layout: post
+category: project
+
+image: https://i.imgur.com/pFJrnPV.jpg
+mobile: https://i.imgur.com/R7E4ySJ.jpg
+
+title1: H&M
+description1: Georgian letters from HM Ampersand <br>Typeface for H&M
+
+title2: Created for
+description2: Monotype<br>Bad Homburg
+---
