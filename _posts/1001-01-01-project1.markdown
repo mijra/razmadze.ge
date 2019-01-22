@@ -9,5 +9,5 @@ title1: Metro Tbilisi
 description1: Typeface project for Mtero Tbilisi<br>Master thesis project
 
 title2: Created at:
-description2: Trier University of Applied Sciences<br>Supervisor: Prof Andreas Hogan
+description2: Trier University of Applied Sciences<br>Supervisor: Prof. Andreas Hogan
 ---
