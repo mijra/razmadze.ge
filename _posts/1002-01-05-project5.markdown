@@ -1,0 +1,13 @@
+---
+layout: post
+category: project
+
+image: https://i.imgur.com/IMtLFif.jpg
+mobile: https://i.imgur.com/a70WnJV.jpg
+
+title1: Galleria Tbilisi
+description1: Logotype Design <br>Georgian version
+
+title2: Created at
+description2: Leavingstone<br>Design team
+---
