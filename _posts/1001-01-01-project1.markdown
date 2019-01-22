@@ -9,5 +9,5 @@ title1: Internet
 description1: Typeface project for Mtero Tbilisi <br>Full project: https://goo.gl/YJH5rj
 
 title2: Second Title
-description2: Trier University of Applied Sciences<br>Supervisor: Prof. Andreas Hogan
+description2: Trier University of Applied Sciences <br>Supervisor: Prof. Andreas Hogan
 ---
