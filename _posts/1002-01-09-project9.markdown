@@ -1,0 +1,13 @@
+---
+layout: post
+category: project
+
+image: https://i.imgur.com/0siamzD.jpg
+mobile: https://i.imgur.com/jYJkRaH.jpg
+
+title1: FiraGo
+description1: Georgian letters for the typeface FiraGo <br>open sorce typeface
+
+title2: More info
+description2: Bboxtype<br>bboxtype.com/typefaces/FiraGO/
+---
