@@ -2,12 +2,12 @@
 layout: post
 category: project
 
-image: https://mir-s3-cdn-cf.behance.net/project_modules/1400/405aad57040901.59ec5d516c5d4.jpg
-mobile: https://mir-s3-cdn-cf.behance.net/project_modules/1400/405aad57040901.59ec5d516c5d4.jpg
+image: https://i.imgur.com/U6FNbv8.jpg
+mobile: https://i.imgur.com/veWaqq3.jpg
 
-title1: Metro Tbilisi v2
-description1: Branding, Typography, <br>Graphic, Design
+title1: Bank of Georgia
+description1: Typeface for Bank of Georgia <br>Design of Georgian letters
 
-title2: Second Title
-description2: Subtitle here about something<br>aqac meore xazze ewereba xolme rame
+title2: Created
+description2: 2016<br>Tbilisi
 ---
