@@ -2,12 +2,12 @@
 layout: post
 category: project
 
-image: https://cl.ly/47d2739abc5c
-mobile: https://cl.ly/47d2739abc5c
+image: https://i.imgur.com/4l4MoTb.jpg
+mobile: https://i.imgur.com/XoqMYpw.jpg
 
-title1: MOOSIK Breaks Free
-description1: Art Direction, Branding, Illustration<br>aq ori xazi unda iyos toma
+title1: Usakhelauri
+description1: typeface for the wine Usakhelauri<br>which means the nameless wihe
 
-title2: Second Title
-description2: Subtitle here about something<br>aqac meore xazze ewereba xolme rame
+title2: Created
+description2: at Leavingstone<br>Used for Usakhelauri wine
 ---
