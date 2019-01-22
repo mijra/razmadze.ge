@@ -2,8 +2,8 @@
 layout: post
 category: project
 
-image: https://cl.ly/d32de0ab55de/screen.jpg
-mobile: https://cl.ly/24ad6637f5ed/mobile.jpg
+image: https://i.imgur.com/SPcGQu2.jpg
+mobile: https://i.imgur.com/as2R9pD.jpg
 
 title1: Internet
 description1: Georgian letters from the <br>typeface designed for Silknet
