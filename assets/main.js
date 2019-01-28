@@ -172,6 +172,7 @@ const createArray = (length) =>
       let item = menuItemNodes[key]
       let index = parseInt(item.dataset.navigationIndex)
       if (index < 0) index = slidesLength + index
+      if (index === NaN) return
       item.addEventListener('click', (e) => {
         slideSwitcher.call(that, index, index > that.activeIndex ? 1 : -1)
       })
