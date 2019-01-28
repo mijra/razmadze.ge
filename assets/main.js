@@ -112,8 +112,6 @@ const createArray = (length) =>
     let leftArrow = this.arrowNodes[0]
     let rightArrow = this.arrowNodes[1]
 
-    console.log(index, lastIndex)
-    
     // If below the first slide, continue from the last
     if (index <= 0) {
       leftArrow.classList.add('disabled')
