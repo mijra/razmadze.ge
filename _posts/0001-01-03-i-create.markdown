@@ -3,10 +3,16 @@ layout: post
 
 headline: I provide 
 headline2: type design
+headline_ge: მე ვაკეთებ
+headline2_ge: ტიპოგრაფიას
 
 title1: Typefaces
 description1: Typeface is the key component <br>of the communication design.
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2: Uniqueness
 description2: The unique typeface makes the brand <br>outstanding and memorable.
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

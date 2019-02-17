@@ -7,7 +7,11 @@ mobile: https://i.imgur.com/w6CWth7.jpg
 
 title1: Frankfurt Book Fair
 description1: Design of modern serif Georgian letters <br>Letter ghan ღ (U+10E6)
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2: Created for
 description2: Georgian pavilion <br>at Frankfurt Book Fair
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

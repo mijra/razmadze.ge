@@ -7,7 +7,11 @@ mobile: https://i.imgur.com/XoqMYpw.jpg
 
 title1: Usakhelauri
 description1: typeface for the wine Usakhelauri<br>which means the nameless wihe
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2: Created
 description2: at Leavingstone<br>Used for Usakhelauri wine
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

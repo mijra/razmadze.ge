@@ -1,0 +1,20 @@
+// [data-lang=ge],
+// [data-lang=en]
+
+body.lang-en
+  [data-lang=en]
+    transition: .25s
+    transition-property: opacity, visibility
+  [data-lang=ge]
+    opacity: 0
+    visibility: hidden
+    display: none
+
+body.lang-ge
+  [data-lang=en]
+    opacity: 0
+    visibility: hidden
+    display: none
+  [data-lang=ge]
+    transition: .25s
+    transition-property: opacity, visibility

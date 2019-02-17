@@ -1,14 +1,20 @@
 ---
 layout: post
 
-icon: "✉️"
+icon: "&#x2709;&#xFE0E;"
 
 headline: contact@
 headline2: razmadze.ge
+headline_ge: contact@
+headline2_ge: razmadze.ge
 
 title1: E-mail
 description1: I will always happy <br>to see your mails
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2: But
 description2: I hope you don't want me<br>to finish the project yesterday
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

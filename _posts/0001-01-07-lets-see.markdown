@@ -3,10 +3,16 @@ layout: post
 
 headline: let’s see 
 headline2: the works
+headline_ge: გამარ
+headline2_ge: ჯობა
 
 title1:  Next pages
 description1: There will be some of my works <br>in different directions.
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2:  Remind
 description2: If interested, this is my email <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

@@ -7,7 +7,11 @@ mobile: https://i.imgur.com/CLbzjSA.jpg
 
 title1: T-shirt
 description1: Yelow T-shirt design <br>აუ გაჩე (Oh stop please)
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2: Printed by
 description2: Maika.ge<br>2016
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

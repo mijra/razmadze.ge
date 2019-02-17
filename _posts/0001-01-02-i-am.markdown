@@ -1,12 +1,18 @@
 ---
 layout: post
 
-headline: I am akaki 
+headline: I am akaki
 headline2: razmadze
+headline_ge: მე ვარ აკაკი
+headline2_ge: რაზმაძე
 
 title1: Contact
 description1: There is my Email Address <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+title1_ge: კონტაქტი
+description1_ge: ჩემი ელ.ფოსტის მისამართია <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
 
 title2: Social networks
 description2: <a href="http://instagram.com/razmadzekoko" target="_blank">www.instagram.com/razmadzekoko</a><br><a href="http://behance.net/razmadze" target="_blank">www.behance.net/razmadze</a>
+title2_ge: სოციალური ქსელები
+description2_ge: <a href="http://instagram.com/razmadzekoko" target="_blank">www.instagram.com/razmadzekoko</a><br><a href="http://behance.net/razmadze" target="_blank">www.behance.net/razmadze</a>
 ---

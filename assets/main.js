@@ -10,10 +10,17 @@ const createArray = (length) =>
 
 ;(function(){
   const SETTINGS = {
+    lang: {
+      en: 'en',
+      ge: 'ge',
+      current: 'en'
+    },
+
     rootNode: document.querySelector('.slider'),
     slideNodes: document.querySelectorAll('.slide'),
     menuItemNodes: document.querySelectorAll('.menu a'),
     arrowNodes: document.querySelectorAll('.arrows i'),
+    langSwitcherNode: document.querySelector('.switch-lang'),
 
     // slider settings
     activeIndex: 0,
@@ -25,6 +32,18 @@ const createArray = (length) =>
   SETTINGS.activeNode = SETTINGS.slideNodes[SETTINGS.activeIndex]
   SETTINGS.slidesLength = SETTINGS.slideNodes.length
   SETTINGS.lastIndex = SETTINGS.slidesLength - 1
+
+  /**
+   * Language Switching
+   */
+  document.body.classList.add(`lang-${SETTINGS.lang.current}`)
+  SETTINGS.langSwitcherNode.addEventListener('click', (e) => {
+    let { current, en, ge } = SETTINGS.lang
+    document.body.classList.remove(`lang-${current}`)
+    if (current === en) SETTINGS.lang.current = current = ge
+    else SETTINGS.lang.current = current = en
+    document.body.classList.add(`lang-${current}`)
+  })
 
   /**
    * Initialize website animations 
@@ -172,7 +191,7 @@ const createArray = (length) =>
       let item = menuItemNodes[key]
       let index = parseInt(item.dataset.navigationIndex)
       if (index < 0) index = slidesLength + index
-      if (index === NaN) return
+      if (index === NaN || index === undefined) return
       item.addEventListener('click', (e) => {
         slideSwitcher.call(that, index, index > that.activeIndex ? 1 : -1)
       })
@@ -234,6 +253,5 @@ const createArray = (length) =>
       if (keyCode === 37 || keyCode === 39)
         slideSwitcher.call(that, activeIndex + direction, direction)
     })
-  } 
-
+  }
 })()

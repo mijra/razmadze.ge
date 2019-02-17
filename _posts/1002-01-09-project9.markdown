@@ -7,7 +7,11 @@ mobile: https://i.imgur.com/jYJkRaH.jpg
 
 title1: FiraGo
 description1: Georgian letters for the typeface FiraGo <br>open sorce typeface
+title1_ge: საიტის შესახებ
+description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
 
 title2: More info
 description2: Bboxtype<br>www.bboxtype.com/typefaces/FiraGO/
+title2_ge: მეტი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
 ---

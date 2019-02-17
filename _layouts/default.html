@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="lang-en">
     <main class="slider">
       {% for post in site.posts reversed %}
         {{ post }}
@@ -16,10 +16,10 @@
       </span>
       <nav class="menu">
         <label class="responsive-adjuster" for="detach-menu">
-          <a data-navigation-index="0">Home</a>
-          <a data-navigation-index="7">Works</a>
-          <a data-navigation-index="-1">Contact</a>
-          <a>ქარ</a>
+          <a data-navigation-index="0"><span data-lang="en">HOME</span><span data-lang="ge">მთავარი</span></a>
+          <a data-navigation-index="7"><span data-lang="en">WORKS</span><span data-lang="ge">პროექტები</span></a>
+          <a data-navigation-index="-1"><span data-lang="en">CONTACT</span><span data-lang="ge">კონტაქტი</span></a>
+          <a class="switch-lang"><span data-lang="en">ქარ</span><span data-lang="ge">ENG</span></a>
         </label>
       </nav>
 

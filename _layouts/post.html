@@ -33,20 +33,38 @@ layout: post
         {% endif %}
 
         <h2>
-          <div class="headline">{{ page.headline }}</div>
-          <div class="headline">{{ page.headline2 }}</div>
+          <div class="headline">
+            <span data-lang="en">{{ page.headline }}</span>
+            <span data-lang="ge">{{ page.headline_ge }}</span>
+          </div>
+          <div class="headline">
+            <span data-lang="en">{{ page.headline2 }}</span>
+            <span data-lang="ge">{{ page.headline2_ge }}</span>
+          </div>
         </h2>
       </div>
     {% endif %}
   </div>
 
   <figcaption class="description">
-    <h5>{{ page.title1 }}</h5>
-    <p>{{ page.description1 }}</p>
+    <h5>
+      <span data-lang="en">{{ page.title1 }}</span>
+      <span data-lang="ge">{{ page.title1_ge }}</span>
+    </h5>
+    <p>
+      <span data-lang="en">{{ page.description1 }}</span>
+      <span data-lang="ge">{{ page.description1_ge }}</span>
+    </p>
   </figcaption>
   <figcaption class="description">
-    <h5>{{ page.title2 }}</h5>
-    <p>{{ page.description2 }}</p>
+    <h5>
+      <span data-lang="en">{{ page.title2 }}</span>
+      <span data-lang="ge">{{ page.title2_ge }}</span>
+    </h5>
+    <p>
+      <span data-lang="en">{{ page.description2 }}</span>
+      <span data-lang="ge">{{ page.description2_ge }}</span>
+    </p>
   </figcaption>
 
   {{page}}
