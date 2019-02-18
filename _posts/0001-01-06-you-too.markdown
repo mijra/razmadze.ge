@@ -14,5 +14,5 @@ description1_ge: დამკვეთი არ არის მხოლოდ
 title2:  Feedback
 description2: The client’s contribution with feedback<br>and friendly attitude always helps the process.
 title2_ge: უკუკავშირი
-description2_ge: დამკვეთის წვლილი უკუკავშირით, <br>და მეგობრულობით ყოველთვის ეხმარება პროცესს.
+description2_ge: დამკვეთის წვლილი უკუკავშირით და <br>მეგობრულობით ყოველთვის ეხმარება პროცესს.
 ---
