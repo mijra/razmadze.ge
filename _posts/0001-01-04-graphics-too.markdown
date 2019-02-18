@@ -4,7 +4,7 @@ layout: post
 headline: And Design 
 headline2: Consulting 
 headline_ge: და დიზაინ
-headline2_ge: კონსულტაციას
+headline2_ge: რჩევებს
 
 title1: Design
 description1: Graphic design as the opportunity <br>of communication is also very important.
