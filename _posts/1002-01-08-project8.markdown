@@ -6,12 +6,12 @@ image: https://i.imgur.com/brb7GgW.jpg
 mobile: https://i.imgur.com/Zu1k2KT.jpg
 
 title1: Neue Frutiger
-description1: Georgian letters <br>for the typeface Neue Helvetica
-title1_ge: საიტის შესახებ
-description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
+description1: Georgian letters <br>for the typeface Neue Frutiger
+title1_ge: Neue Frutiger
+description1_ge: ქართული ასოები <br>შრიფტისთვის Neue Frutiger
 
 title2: Created for
-description2: Monotype<br>Bad Homburg
-title2_ge: მეტი ინფორმაცია
-description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
+description2: Monotype<br>2018
+title2_ge: შეიქმნა
+description2_ge: Monotype-სთვის, <br>2018 წელი
 ---
