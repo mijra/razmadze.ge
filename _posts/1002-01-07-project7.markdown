@@ -7,11 +7,11 @@ mobile: https://i.imgur.com/R7E4ySJ.jpg
 
 title1: H&M
 description1: Georgian letters from HM Ampersand <br>Typeface for H&M
-title1_ge: საიტის შესახებ
-description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
+title1_ge: H&M
+description1_ge: ქართული ასოები HM Ampersand-იდან, <br>შრიფტი H&M-ისთვის
 
 title2: Created for
 description2: Monotype<br>Bad Homburg
-title2_ge: მეტი ინფორმაცია
-description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
+title2_ge: შეიქმნა
+description2_ge: Monotype-სთვის <br>ბად ჰომბურგი, გერმანია
 ---
