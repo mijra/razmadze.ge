@@ -3,8 +3,8 @@ layout: post
 
 headline: You can 
 headline2: help me too
-headline_ge: შენც შეგიძლია
-headline2_ge: დახმარება
+headline_ge: თქვენც
+headline2_ge: შეგიძლიათ
 
 title1:  Together
 description1: client is not just an user, client is<br>an important part of work.
