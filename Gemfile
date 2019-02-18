@@ -30,5 +30,3 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 ##
 gem 'jekyll-seo-tag'
-
-gem "jekyll-assets", git: "https://github.com/envygeeks/jekyll-assets", group: :jekyll_plugins
