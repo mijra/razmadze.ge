@@ -10,8 +10,8 @@ description1: Georgian letters <br>for the typeface Neue Helvetica
 title1_ge: Neue Helvetica
 description1_ge: ქართული ასოები <br>შრიფტისთვის Neue Helvetica
 
-title2: შეიქმნა
-description2: Monotype-ში<br>ბად ჰომბურგი, გერმანია.
-title2_ge: მეტი ინფორმაცია
-description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
+title2: Created at:
+description2: Monotype<br>Bad Homburg
+title2_ge: შეიქნა
+description2_ge: Monotype-ში, <br>ბად ჰომბურგი, გერმანია
 ---
