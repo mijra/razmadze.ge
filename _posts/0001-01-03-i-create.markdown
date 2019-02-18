@@ -3,8 +3,8 @@ layout: post
 
 headline: I provide 
 headline2: type design
-headline_ge: მე გთავაზობთ
-headline2_ge: შრიფტის დიზაინს
+headline_ge: გთავაზობთ
+headline2_ge: შრიფტებს
 
 title1: Typefaces
 description1: Typeface is the key component <br>of the communication design.
