@@ -8,7 +8,7 @@ mobile: https://i.imgur.com/veWaqq3.jpg
 title1: Bank of Georgia
 description1: Typeface for Bank of Georgia <br>Design of Georgian letters
 title1_ge: საქართველოს ბანკი
-description1_ge: შრიფტის დიზაინი საქართველოს ბანკისთვის, <br>ქართული ასო-ნიშნების დიზაინი
+description1_ge: შრიფტის და წარწერის დიზაინი <br>საქართველოს ბანკისთვის
 
 title2: Created
 description2: 2016<br>Tbilisi
