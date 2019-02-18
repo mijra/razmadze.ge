@@ -3,16 +3,16 @@ layout: post
 
 headline: You can 
 headline2: help me too
-headline_ge: გამარ
-headline2_ge: ჯობა
+headline_ge: შენც შეგიძლია
+headline2_ge: დახმარება
 
-title1:  Co-operation
+title1:  Together
 description1: client is not just an user, client is<br>an important part of work.
-title1_ge: საიტის შესახებ
-description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
+title1_ge: ერთად
+description1_ge: დამკვეთი არ არის მხოლოდ მომხმარებელი, <br>დამკვეთი სამუშაოს მნიშვნელოვანი ნაწილია.
 
 title2:  Feedback
 description2: The client’s contribution with feedback<br>and friendly attitude always helps the process.
-title2_ge: მეტი ინფორმაცია
-description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
+title2_ge: უკუკავშირი
+description2_ge: დამკვეთის წვლილი უკუკავშირით, <br>და მეგობრულობით ყოველთვის ეხმარება პროცესს.
 ---
