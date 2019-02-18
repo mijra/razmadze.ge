@@ -10,11 +10,11 @@ headline2_ge: razmadze.ge
 
 title1: E-mail
 description1: I will always happy <br>to see your mails
-title1_ge: საიტის შესახებ
-description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
+title1_ge: ელ. ფოსტა
+description1_ge: ყოველთვის მიხარია <br>თქვენი წერილების ნახვა
 
 title2: But
 description2: I hope you don't want me<br>to finish the project yesterday
-title2_ge: მეტი ინფორმაცია
-description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
+title2_ge: მაგრამ
+description2_ge: იმედი მაქვს არ გინდათ <br>პროექტის დასრულება გუშინ
 ---
