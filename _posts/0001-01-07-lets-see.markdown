@@ -14,5 +14,5 @@ description1_ge: ამ საიტზე რამდენიმე ნამ
 title2:  Remind
 description2: If interested, this is my email <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
 title2_ge: შეხსენება
-description2_ge: თუ დაგაინტერესებთ, აქ ჩემი ელ. ფოსტაა: <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+description2_ge: თუ დაგაინტერესებთ, აქ ჩემი ელ. ფოსტაა, <br><a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
 ---
