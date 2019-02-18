@@ -3,16 +3,16 @@ layout: post
 
 headline: Hello
 headline2: Everyone
-headline_ge: გამარ
-headline2_ge: ჯობა
+headline_ge: სალამი
+headline2_ge: ყველას
 
 title1: About site
 description1: There is my personal site and works, <br>Typography & Graphic Design
 title1_ge: საიტის შესახებ
-description1_ge: არის ჩემი პირადი საიტი და მუშაობს, <br>ტიპოგრაფია და გრაფიკული დიზაინი
+description1_ge: აქ რამდენიმე პროექტი და ნამუშევარია, <br>ტიპოგრაფიასა და გრაფიკულ დიზაინში
 
 title2: More info
 description2: To find out other details, <br>please see the next pages
-title2_ge: მეტი ინფორმაცია
-description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდი
+title2_ge: დამატებითი ინფორმაცია
+description2_ge: სხვა დეტალების გასარკვევად, <br>იხილეთ შემდეგი გვერდები
 ---
