@@ -9,10 +9,10 @@ headline2_ge: შეგიძლიათ
 title1:  Together
 description1: client is not just an user, client is<br>an important part of work.
 title1_ge: ერთად
-description1_ge: დამკვეთი არ არის მხოლოდ მომხმარებელი, <br>დამკვეთი სამუშაოს მნიშვნელოვანი ნაწილია.
+description1_ge: დამკვეთი მხოლოდ მომხმარებელი არაა, <br>ის სამუშაოს მნიშვნელოვანი ნაწილია.
 
 title2:  Feedback
 description2: The client’s contribution with feedback<br>and friendly attitude always helps the process.
 title2_ge: უკუკავშირი
-description2_ge: დამკვეთის წვლილი უკუკავშირით და <br>მეგობრულობით ყოველთვის ეხმარება პროცესს.
+description2_ge: დამკვეთის წვლილი უკუკავშირით და <br>მეგობრულობით ეხმარება პროცესს.
 ---
