@@ -53,6 +53,7 @@
       }
       body {
         display: flex;
+        padding: 4.2% 5%;
         padding: 4.2vmax 5vmax;
         box-sizing: border-box;
         flex-direction: column;
@@ -68,17 +69,16 @@
         height: 100%;
         line-height: 1.3;
         font-weight: 300;
-        margin: 0 0 1em;
+        margin: 0 0 .65em;
       }
 
       footer {
         line-height: 1.4;
-        font-size: 10pt;
         letter-spacing: .1px;
       }
+      p { margin: 0; }
       a {
         text-decoration: none;
-        display: block;
         font-weight: 400;
       }
       a:hover { text-decoration: underline; }
@@ -103,35 +103,49 @@
     <header>
       <h1>Hi, <br> I’m Akaki Razmadze, <br class="not-in-portrait"> communication & type designer. <br> This is my personal website <br class="not-in-portrait"> and if you can read this, <br class="not-in-landscape"> you’ve <br class="not-in-portrait"> already seen my work.</h1>
     </header>
-    <footer>For more info:
-      <a href="http://instagram.com/razmadzekoko" target="_blank">www.instagram.com/razmadzekoko</a>
-      <a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+    <footer>
+      <p>
+        For more info:<br>
+        <a href="http://instagram.com/razmadzekoko" target="_blank">www.instagram.com/razmadzekoko</a><br>
+        <a href="mailto:contact@razmadze.ge" target="_blank">contact@razmadze.ge</a>
+      </p>
     </footer>
 
-    <script src="fitty.min.js"></script>
+    <script src="node_modules/fitty/dist/fitty.min.js"></script>
     <script>
-      fitty('h1');
-
-      var header = document.querySelector('header')
-      var min = [320, 100]
-      var max = [1920, 50]
-      var percentRange = min[1] - max[1]
-      var pxRange = max[0] - min[0]
-      var ratio = percentRange / pxRange
-
-      var { pow, sqrt } = Math
-      
       var easeInCirc = x => 1 - Math.sqrt(1 - Math.pow(x, 2))
-      var easeOutCirc = x => sqrt(1 - pow(x - 1, 2))
+      var easeOutCirc = x => Math.sqrt(1 - Math.pow(x - 1, 2))
+
+      var adjustabbleSections = [{
+        element: 'header',
+        min: [320, 100],
+        max: [1920, 50]
+      }, {
+        element: 'footer',
+        min: [320, 70],
+        max: [1920, 12]
+      }]
 
       var reRender = () => {
-        var currentPoint = ratio * (window.innerWidth - min[0]) / percentRange
-        var eased = easeOutCirc(currentPoint)
-        var addPercent = min[1] - eased * percentRange
-        header.style.width = addPercent + '%'
+        adjustabbleSections.forEach(item => {
+          var element = item._elem
+          if (!element) element = item._elem = document.querySelector(item.element)
+          var percentRange = item.min[1] - item.max[1]
+          var pxRange = item.max[0] - item.min[0]
+          var ratio = percentRange / pxRange
+          var currentPoint = ratio * (window.innerWidth - item.min[0]) / percentRange
+          var eased = easeOutCirc(currentPoint)
+          var addPercent = item.min[1] - eased * percentRange
+          element.style.width = addPercent + '%'
+        })
+
         window.requestAnimationFrame(reRender)
       }
+
       reRender()
+
+      fitty('h1', { minSize: 10 })
+      fitty('p', { minSize: 10 })
     </script>
   </body>
 </html>
