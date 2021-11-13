@@ -2,7 +2,6 @@
 # yarn lockfile v1
 
 
-fitty@^2.3.0:
+"fitty@git+https://github.com/mijra/fitty.git":
   version "2.3.0"
-  resolved "https://registry.yarnpkg.com/fitty/-/fitty-2.3.0.tgz#abf8a59987a8e01fe00bd09a4ce91570b183d830"
-  integrity sha512-a4axS2xr0Lcp95We4hIrAvpgdzp6WHPaHp9neb5kMdjefCsNLoD4lPx69yKtKe60X/ZMEJznsPot6C1Tw5KZOA==
+  resolved "git+https://github.com/mijra/fitty.git#3ec24d58d17d48270838394a99507b01efe4d8d1"
